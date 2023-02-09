@@ -1,6 +1,5 @@
 package edu.qaguru;
 
-import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.Test;
@@ -19,12 +18,12 @@ public class SelenideTest {
 
         open("https://github.com/");
         $("[name=q]").click();
-        $("[name=q]").sendKeys("chatGPT");
+        $("[name=q]").sendKeys("acheong08/ChatGPT");
         $("[name=q]").submit();
 
         $(linkText("acheong08/ChatGPT")).click();
         $("#issues-tab").click();
-        $(withText("#5965")).should(exist);
+        $(withText("#618")).should(exist);
 
 
 

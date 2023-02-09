@@ -1,7 +1,6 @@
 package edu.qaguru;
 
 import com.codeborne.selenide.logevents.SelenideLogger;
-import io.qameta.allure.Step;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.Test;
 
@@ -15,8 +14,8 @@ import static org.openqa.selenium.By.linkText;
 
 
 public class StepsTest {
-    private static final String REPOSITORY="lencx/ChatGPT";
-    private static final int ISSUE=323;
+    private static final String REPOSITORY="acheong08/ChatGPT";
+    private static final int ISSUE=618;
     @Test
     public void searchIssueLambda(){
 
@@ -26,7 +25,7 @@ public class StepsTest {
         } );
         step("Ищем репозиторий  "+REPOSITORY, ()->{
             $("[name=q]").click();
-            $("[name=q]").sendKeys("chatGPT");
+            $("[name=q]").sendKeys("acheong08/ChatGPT");
             $("[name=q]").submit();
         } );
 
