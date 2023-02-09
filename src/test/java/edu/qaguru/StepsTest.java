@@ -12,47 +12,44 @@ import static io.qameta.allure.Allure.step;
 import static org.openqa.selenium.By.linkText;
 
 
+public class StepsTest extends TestBase {
+    private static final String REPOSITORY = "acheong08/ChatGPT";
+    private static final int ISSUE = 618;
 
-public class StepsTest {
-    private static final String REPOSITORY="acheong08/ChatGPT";
-    private static final int ISSUE=618;
     @Test
-    public void searchIssueLambda(){
+    public void searchIssueLambdaTest() {
 
-        SelenideLogger.addListener("allure",new AllureSelenide());
-        step("Открываем главную страницу", ()->{
+        step("Открываем главную страницу", () -> {
             open("https://github.com/");
-        } );
-        step("Ищем репозиторий  "+REPOSITORY, ()->{
+        });
+
+        step("Ищем репозиторий  " + REPOSITORY, () -> {
             $("[name=q]").click();
             $("[name=q]").sendKeys("acheong08/ChatGPT");
             $("[name=q]").submit();
-        } );
+        });
 
-        step("Кликаем по ссылке репозитория  "+REPOSITORY, ()->{
-
+        step("Кликаем по ссылке репозитория  " + REPOSITORY, () -> {
             $(linkText("acheong08/ChatGPT")).click();
         });
-        step("Открываем таб Issues", ()->{
+
+        step("Открываем таб Issues", () -> {
             $("#issues-tab").click();
         });
-        step("Проверяем наличие Issue с номером "+ISSUE);
-        $(withText("#"+ISSUE)).should(exist);
 
-
+        step("Проверяем наличие Issue с номером " + ISSUE);
+        $(withText("#" + ISSUE)).should(exist);
 
     }
 
     @Test
-    public void testAnnotatedStep(){
-        WebSteps steps=new WebSteps();
-        SelenideLogger.addListener("allure",new AllureSelenide());
+    public void annotatedStepTest() {
+        WebSteps steps = new WebSteps();
+        SelenideLogger.addListener("allure", new AllureSelenide());
         steps.openMainPage();
         steps.searchForRepository(REPOSITORY);
         steps.clickOnRepositoryLink(REPOSITORY);
         steps.openIssueTab();
         steps.shouldSeeIssueWithNumber(ISSUE);
-
     }
-
 }
