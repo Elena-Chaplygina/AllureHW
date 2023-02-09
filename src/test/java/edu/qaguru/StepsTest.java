@@ -1,7 +1,5 @@
 package edu.qaguru;
 
-import com.codeborne.selenide.logevents.SelenideLogger;
-import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.exist;
@@ -45,7 +43,6 @@ public class StepsTest extends TestBase {
     @Test
     public void annotatedStepTest() {
         WebSteps steps = new WebSteps();
-        SelenideLogger.addListener("allure", new AllureSelenide());
         steps.openMainPage();
         steps.searchForRepository(REPOSITORY);
         steps.clickOnRepositoryLink(REPOSITORY);
