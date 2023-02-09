@@ -1,0 +1,1 @@
+{"total":2,"items":[{"uid":"1ac44e01a9960ea2f519f3c2a9c0eea0","name":"edu.qaguru.StepsTest","statistic":{"failed":0,"broken":0,"skipped":0,"passed":2,"unknown":0,"total":2}},{"uid":"679378571bb0796307684de710309450","name":"edu.qaguru.SelenideTest","statistic":{"failed":0,"broken":0,"skipped":0,"passed":1,"unknown":0,"total":1}}]}

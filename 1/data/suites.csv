@@ -1,0 +1,4 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Thu Feb 09 19:16:01 GMT 2023","Thu Feb 09 19:16:08 GMT 2023","6463","","edu.qaguru.SelenideTest","","edu.qaguru.SelenideTest","searchIssue","searchIssue()",""
+"passed","Thu Feb 09 19:16:08 GMT 2023","Thu Feb 09 19:16:10 GMT 2023","2312","","edu.qaguru.StepsTest","","edu.qaguru.StepsTest","searchIssueLambda","searchIssueLambda()",""
+"passed","Thu Feb 09 19:16:10 GMT 2023","Thu Feb 09 19:16:12 GMT 2023","2248","","edu.qaguru.StepsTest","","edu.qaguru.StepsTest","testAnnotatedStep","testAnnotatedStep()",""
